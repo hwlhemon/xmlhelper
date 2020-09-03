@@ -23,8 +23,9 @@ int main(int argc, char *argv[])
     xml.addChildTextNode("Registration/Static", "Field2", "xxx", attrmap);
 #else
     hwd::strmap_t attrmap2;
-    attrmap2["uid"] = "test";
-    xml.removeElem("Registration/Static", attrmap2);
+    attrmap2["uid"] = "testx";
+    //xml.removeElem("Registration/Static", attrmap2);
+    bool ok = xml.findElement("Registration/Static", attrmap2);
     //xml.removeAttr("Registration/Static", "index", attrmap2);
 //     QStringList valList = xml.getElemValue("Registration/Static");
 //     QStringList attrList = xml.getAttrValue("Registration/Static", "uid");

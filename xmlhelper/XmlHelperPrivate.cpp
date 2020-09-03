@@ -133,6 +133,18 @@ QString XmlHelperPrivate::getFirstElemValue(const QString &elemName)
     return valList.isEmpty() ? "" : valList.first();
 }
 
+bool XmlHelperPrivate::findElement(const QString &elemName,
+                                   const strmap_t &ctx)
+{
+    if (!m_valid) return false;
+    QList<QDomElement> elemList;
+    if (!getAllSpecifyElem(elemName, elemList, ctx)) {
+        return false;
+    }
+
+    return elemList.size() != 0;
+}
+
 QStringList XmlHelperPrivate::getAttrValue(const QString &elemName,
                                            const QString &attrName,
                                            const strmap_t &ctx)

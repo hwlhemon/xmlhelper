@@ -62,6 +62,9 @@ public:
                               const QString &attrName,
                               const strmap_t &ctx = strmap_t());
 
+    bool findElement(const QString &elemName,
+                     const strmap_t &ctx = strmap_t());
+
     /**
     * @brief add element or update element value
     * @param elemName  node name, split whit "/"

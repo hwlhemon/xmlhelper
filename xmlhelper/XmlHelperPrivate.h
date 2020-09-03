@@ -32,6 +32,9 @@ private:
     QStringList getElemValue(const QString &elemName);
     QString getFirstElemValue(const QString &elemName);
 
+    bool findElement(const QString &elemName,
+                     const strmap_t &ctx = strmap_t());
+
     QStringList getAttrValue(const QString &elemName,
                              const QString &attrName,
                              const strmap_t &ctx = strmap_t());

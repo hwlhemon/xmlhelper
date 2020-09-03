@@ -62,6 +62,13 @@ QString XmlHelper::getFirstAttrValue(const QString &elemName,
     return d->getFirstAttrValue(elemName, attrName, ctx);
 }
 
+bool XmlHelper::findElement(const QString &elemName,
+                            const strmap_t &ctx)
+{
+    Q_D(XmlHelper);
+    return d->findElement(elemName, ctx);
+}
+
 bool XmlHelper::updateElem(const QString &elemName,
                            const QString &value,
                            const bool create)
